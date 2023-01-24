@@ -1,3 +1,6 @@
+window.innerHeight = 300;
+window.innerWidth = 300;
+
 // debts examples
 const debts = [
     {
