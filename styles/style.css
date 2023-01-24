@@ -1,6 +1,6 @@
 :root {
-    --theme-color: rgb(20,20,20);
-    --green-theme: rgb(3, 19, 55);
+    --bg-theme: #353533;
+    --text-theme: #3dd40b;
 }
 
 *, *::before, *::after {
@@ -11,7 +11,7 @@
 }
 
 body {
-    background: var(--theme-color);
+    background: rgb(215, 215, 215);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -23,21 +23,22 @@ body {
     height: 80vh;
     width: 400px;
     max-width: 300px;
-    background: rgba(255, 255, 255, 0.752);
+    background: var(--bg-theme);
     border-radius: 10px;
     padding: 0 1rem 5rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: end;
-
 }
+
+
 
 form {
     display: flex;
     flex-direction: column;
     gap: .7rem;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
 }
 
 input {
@@ -50,13 +51,15 @@ input {
 }
 
 .account-query {
-    font-size: 12px;
+    font-size: 13px;
+    color: #fff;
+    margin: .3rem 0;
 }
 
 button {
     width: 60%;
     padding: .6rem;
-    background:rgb(3, 19, 55);
+    background: var(--text-theme);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -64,7 +67,7 @@ button {
 }
 
 a {
-    color: var(--green-theme)
+    color: var(--text-theme);
 }
 
 @media screen and (max-width: 500px) {

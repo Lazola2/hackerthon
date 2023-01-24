@@ -1,6 +1,7 @@
 :root {
-    --theme-color: rgb(20,20,20);
-    --green-theme: rgb(3, 19, 55);
+    --bg-theme: #353533;
+    --text-theme: #3dd40b;
+    --debt-item: #232323;
 }
 
 *, *::before, *::after {
@@ -11,7 +12,7 @@
 }
 
 body {
-    background: var(--theme-color);
+    background: rgb(215, 215, 215);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -23,7 +24,7 @@ body {
     height: 80vh;
     width: 400px;
     max-width: 300px;
-    background: rgba(255, 255, 255, 0.752);
+    background: var(--bg-theme);
     border-radius: 10px;
     padding: 2rem 1rem;
     display: flex;
@@ -31,6 +32,7 @@ body {
     justify-content: end;
     position: relative;
     overflow: hidden;
+    color: #fff;
 }
 
 .top-section {
@@ -52,12 +54,27 @@ body {
     left: 0 !important;
 }
 
+.wrapper-overall-debt {
+    height: 7rem;
+    width: 7rem;
+}
+
 .overall-debt {
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
-    background: rgb(13, 3, 162);
+    background: conic-gradient( var(--text-theme) calc(360deg * .54), rgba(255, 255, 255, 0.181) 0deg );  
     align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overall-debt .inner-circle {
+    height: 6.3rem;
+    width: 6.3rem;
+    border-radius: 50%;
+    background: var(--bg-theme); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,15 +84,6 @@ body {
     align-self: center;
 }
 
-.overall-debt .inner-circle {
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    background: rgb(206, 205, 205); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .overall-percentage {
     font-size: 30px;
@@ -84,7 +92,6 @@ body {
 .bottom-section {
     width: 100%;
     height: 55%;
-    /* background-color: green; */
 }
 
 .debts {
@@ -96,10 +103,10 @@ body {
 .debt-item {
     height: 65px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.434);
+    background-color: var(--debt-item);
     border-radius: 5px;
     display: flex;
-    border: 1px solid rgb(189, 189, 189);
+    /* border: 1px solid rgb(189, 189, 189); */
 }
 
 .debt-description {
@@ -122,18 +129,19 @@ body {
 .progress-bar {
     height: 80%;
     width: 80%;
-    background: rgb(32, 3, 118);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: conic-gradient( var(--text-theme) calc(360deg * .54), rgba(255, 255, 255, 0.181) 0deg );
+    transition: .4s;
 }
 
 .progress-bar .inner-circle {
-    height: 75%;
-    width: 75%;
+    height: 87%;
+    width: 87%;
     border-radius: 50%;
-    background: rgb(225, 224, 224);
+    background: var(--debt-item);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,6 +162,10 @@ body {
     gap: .2rem;
 }
 
+.invisible {
+    visibility: hidden;
+}
+
 .party-owed-container {
     display: flex;
     justify-content: space-between;
@@ -161,9 +173,9 @@ body {
 }
 
 .party-owed-container p {
-    scale: 1.04;
+    scale: 1.07;
     font-weight: 500;
-    color:rgb(4, 46, 144);
+    color: var(--text-theme);
 }
 
 .number-of-debts {
@@ -193,6 +205,9 @@ body {
     animation: rotate .5s ease-in-out forwards;
 }
 
+
+
+
 @keyframes rotate {
     from {
         rotate: 0deg;
@@ -206,7 +221,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(12, 3, 92);
+    background: var(--text-theme);
 }
 
 .settings i {
@@ -215,14 +230,16 @@ body {
 }
 
 .settings-page {
-    background: #fff;
+    background: var(--bg-theme);
     width: 100%;
     height: 82%;
     position: absolute;
     left: 100%;
     transition: .4s;
     z-index: 10;
+    padding: 1rem;
 }
+
 
 /* media query */
 @media screen and (max-width: 450px) {
@@ -236,4 +253,13 @@ body {
         max-width: 100%;
         border-radius: 0;
     }
+}
+
+i {
+    color: red;
+}
+
+.item-name {
+    color: var(--text-theme);
+    font-size: 13px;
 }
