@@ -21,12 +21,13 @@ const debts = [
     },
     {
         id: 3,
-        partyOwed: 'Entertainment',
+        partyOwed: 'Investment',
         price: 15000,
         balance: 2470,
-        description: 'Money for groove',
+        description: 'Investing',
         paymentDate: '22-04-2023'
     },
+    
     
 ]
 
