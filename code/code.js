@@ -6,6 +6,12 @@ const users = [
         password: 'password123',
         name: 'Jack'
     },
+    {
+        id: 2,
+        username: 'Zikhona123',
+        password: 'zikhona123',
+        name: 'Zikhona'
+    }
 ];
 
 // sending the users to the localStorage
